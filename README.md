@@ -10,4 +10,5 @@ Cashnote Clone Coding.
 * [ ] axios/react-apollo
 * [x] styled-components
 * [ ] enzyme
-* [x] eslint/prettier
+* [x] eslint(tslint)/prettier
+* [x] typescript

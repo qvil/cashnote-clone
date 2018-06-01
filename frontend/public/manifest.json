@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "캐시노트",
+  "name": "캐시노트 - 가장 쉬운 매출관리",
   "icons": [
     {
       "src": "favicon.ico",
