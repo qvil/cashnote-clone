@@ -25,13 +25,15 @@ const StyledItem = styled<IStyledItemProps, any>("li")`
   ${fontBase};
   flex: 1;
   display: flex;
+  justify-content: right;
+  align-items: center;
   color: ${props =>
     props.highlight ? props.theme.color.primary : props.theme.color.secondary};
   padding: 8px;
-  align-items: center;
   font-style: normal;
+  text-align: right;
   cursor: pointer;
-  min-width: 60px;
+  min-width: 70px;
   &:hover {
     margin-bottom: ${props => props.theme.spacing.unit}px;
     transition: 0.3s;
@@ -48,6 +50,8 @@ export default class ItemList extends React.Component<IItemListProps, any> {
   public render() {
     return (
       <StyledItemList>
+        <StyledItem>카드매출 관리</StyledItem>
+        <StyledItem>세무사 찾기</StyledItem>
         <StyledItem>가격</StyledItem>
         <StyledItem highlight={true}>로그인</StyledItem>
         <StyledItem highlight={true}>회원가입</StyledItem>
