@@ -1,8 +1,14 @@
 import * as React from "react";
 import Header from "src/components/Header";
-import { injectGlobal } from "styled-components";
+import { injectGlobal, ThemeProvider } from "styled-components";
+import theme from "src/constants/theme";
 
 injectGlobal`
+  @font-face {
+    font-family: 'NanumSquareRound',sans-serif;
+    src: url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+  }
+  
   body {
     padding: 0;
     margin: 0;
@@ -12,9 +18,11 @@ injectGlobal`
 class App extends React.Component {
   public render() {
     return (
-      <div>
-        <Header />
-      </div>
+      <ThemeProvider theme={theme}>
+        <div>
+          <Header />
+        </div>
+      </ThemeProvider>
     );
   }
 }
