@@ -4,8 +4,8 @@ import styled, { css } from "styled-components";
 
 const StyledItemList = styled.ul`
   display: flex;
-  float: right;
   list-style-type: none;
+  white-space: nowrap;
   padding: 0px;
   margin: 0px 16px;
   min-height: 60px;
@@ -19,21 +19,19 @@ const fontBase = css`
   font-family: "NanumSquareRound", sans-serif;
   font-weight: 400;
   font-size: 15px;
+  font-style: normal;
 `;
 
 const StyledItem = styled<IStyledItemProps, any>("li")`
   ${fontBase};
   flex: 1;
   display: flex;
-  justify-content: right;
   align-items: center;
+  padding: ${props => props.theme.spacing.unit}px;
+  margin: 0px 10px;
   color: ${props =>
     props.highlight ? props.theme.color.primary : props.theme.color.secondary};
-  padding: 8px;
-  font-style: normal;
-  text-align: right;
   cursor: pointer;
-  min-width: 70px;
   &:hover {
     margin-bottom: ${props => props.theme.spacing.unit}px;
     transition: 0.3s;
