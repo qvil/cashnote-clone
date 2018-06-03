@@ -1,5 +1,6 @@
 import * as React from "react";
 import Header from "src/components/Header";
+import { Button } from "src/components/CustomerCenter";
 import { injectGlobal, ThemeProvider } from "styled-components";
 import theme from "src/constants/theme";
 
@@ -21,6 +22,7 @@ class App extends React.Component {
       <ThemeProvider theme={theme}>
         <div>
           <Header />
+          <Button title="고객센터" />
         </div>
       </ThemeProvider>
     );

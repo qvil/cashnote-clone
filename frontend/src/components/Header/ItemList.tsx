@@ -30,7 +30,7 @@ const StyledItem = styled<IStyledItemProps, any>("li")`
   padding: ${props => props.theme.spacing.unit}px;
   margin: 0px 10px;
   color: ${props =>
-    props.highlight ? props.theme.color.primary : props.theme.color.secondary};
+    props.highlight ? props.theme.color.primary : props.theme.color.text};
   cursor: pointer;
   &:hover {
     margin-bottom: ${props => props.theme.spacing.unit}px;

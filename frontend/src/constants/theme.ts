@@ -1,7 +1,8 @@
 const theme = {
   color: {
     primary: "#02a6ac",
-    secondary: "#333333",
+    secondary: "#54c7c3",
+    text: "#333333",
     grey: "#bbb"
   },
   spacing: {
