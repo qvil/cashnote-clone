@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { fontBase } from "src/components/common/font";
+import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 
 export interface IButtonProps {
   title: string;
@@ -13,7 +14,7 @@ const ButtonContainer = styled.div`
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 126px;
+  width: 134px;
   height: 45px;
   border-radius: 22px;
   cursor: pointer;
@@ -25,18 +26,21 @@ const ButtonContainer = styled.div`
   font-size: 15px;
 `;
 
-const Icon = styled.span`
-  border: 2px solid white;
-  border-radius: 24px;
-  padding: 4px;
+const Icon = styled(HelpOutlineIcon)`
+  margin-right: ${props => props.theme.spacing.unit}px;
+`;
+
+const Text = styled.span`
+  ${fontBase};
+  font-weight: 700;
 `;
 
 export default class Button extends React.Component<IButtonProps, any> {
   public render() {
     return (
       <ButtonContainer>
-        <Icon>?</Icon>
-        {this.props.title}
+        <Icon />
+        <Text>{this.props.title}</Text>
       </ButtonContainer>
     );
   }
