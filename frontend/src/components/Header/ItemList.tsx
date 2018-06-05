@@ -45,6 +45,12 @@ export interface IItemListProps {
 }
 
 export default class ItemList extends React.Component<IItemListProps, any> {
+  constructor(props: any) {
+    super(props);
+
+    console.log(window.scroll);
+  }
+
   public render() {
     return (
       <StyledItemList>
